@@ -12,19 +12,55 @@ public class Exercise04 {
 
     }
 
-    public static int sumNum(int num) {
-        return 0;
+    public static int sumNum(int num)
+    {
+        if (num == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return num + sumNum(num - 1);
+        }
     }
 
-    public static int sumEvenNum(int num) {
-        return 0;
+    public static int sumEvenNum(int num)
+    {
+        int contador = 0;
+        int suma = 0;
+        while (contador <= 20)
+        {
+            if (num % 2 == 0)
+            {
+                suma += num;
+                contador ++;
+            }
+
+        }
+        return suma;
     }
 
-    public static int factorial(int num) {
-        return 0;
+    public static int factorial(int num)
+    {
+        int factor = num;
+        for (int i = 1; i < num; i++)
+        {
+            factor *= i;
+
+
+        }
+        return factor;
     }
 
-    public static int recursiveFactorial(int num) {
-        return 0;
+    public static int recursiveFactorial(int num)
+    {
+        if (num == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return num * recursiveFactorial(num - 1);
+        }
     }
 }
